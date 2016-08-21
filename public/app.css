@@ -1,0 +1,15 @@
+nav {
+    margin-bottom: 30px;
+}
+
+form.inline {
+    display: inline;
+}
+
+form.inline>button {
+    display: inline;
+}
+
+.card a>.card-title {
+    color: #373a3c;
+}
