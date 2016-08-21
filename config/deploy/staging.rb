@@ -21,7 +21,7 @@ role :app, %w{107.170.237.216}
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-set :deploy_to, '/var/www/api.schedules.lasa2017.com'
+set :deploy_to, '/var/www/schedules.lasa2017.com'
 set :branch, 'master'
 
 # Configuration

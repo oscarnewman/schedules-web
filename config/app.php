@@ -154,6 +154,7 @@ return [
          * Package Service Providers...
          */
          Dingo\Api\Provider\LaravelServiceProvider::class,
+         Davibennun\LaravelPushNotification\LaravelPushNotificationServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -209,6 +210,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'APIRoute' => Dingo\Api\Facade\Route::class,
+        'Push' => Davibennun\LaravelPushNotification\Facades\PushNotification::class
 
     ],
 
