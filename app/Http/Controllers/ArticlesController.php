@@ -46,8 +46,7 @@ class ArticlesController extends Controller
             'title' => 'required',
             'author' => 'required',
             'body' => 'required',
-            'category' => 'required',
-            'push' => 'required|boolean'
+            'category' => 'required'
         ]);
 
         $article = Article::create($request->all());

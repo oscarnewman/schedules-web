@@ -14,7 +14,7 @@ class DevicesController extends Controller
 
     public function store(Request $request) {
         $this->validate($request, [
-            'token' => 'required'
+            'token' => 'required|unique:devices'
         ]);
 
         $device = Device::create($request->all());
