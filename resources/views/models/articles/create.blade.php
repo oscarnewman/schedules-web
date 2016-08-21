@@ -23,6 +23,12 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="push">
+                <input type="checkbox" name="push" value="1"> Send Push Notifications
+                </label>
+                <small class="form-text text-muted">Checking this will send it to EVERY device with the app. Don't abuse it.</small>
+            </div>
+            <div class="form-group">
                 <label for="body">Body</label>
                 <textarea class="form-control" name="body" rows="8"></textarea>
             </div>

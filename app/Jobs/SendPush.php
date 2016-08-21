@@ -7,7 +7,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-use Device;
+use App\Device;
 use Push;
 
 class SendPush extends Job implements ShouldQueue
@@ -33,16 +33,16 @@ class SendPush extends Job implements ShouldQueue
      */
     public function handle()
     {
-        $devices = Device::all();
+        $devices = Device::all()->toArray();
+        $pushDevices = array_map(function($device) {
+            return Push::Device($device['token']);
+        }, $devices);
 
+        // dd($pushDevices);
         // map each eloquent device into a device collection usable by the library
-        $devices = Push::DeviceCollection(
-            array_map(function($device) {
-                return Push::Device($device->token);
-            }, $devices)
-        );
+        $devices = Push::DeviceCollection($pushDevices);
 
-        $message = Push::Message($message, [
+        $message = Push::Message($this->message, [
             'badge' => 1,
             'sound' => 'default'
         ]);
@@ -50,7 +50,7 @@ class SendPush extends Job implements ShouldQueue
         $push = Push::app('schedules-ios')
                 ->to($devices)
                 ->send($message);
-        
+
 
     }
 }
