@@ -33,4 +33,6 @@ $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', ['namespace' => '\App\Http\Controllers\API\v1'], function ($api) {
     $api->resource('articles', 'ArticlesController');
+
+    $api->post('devices', 'DevicesController@store')
 });

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Jobs\SendPush;
 
 use App\Article;
 
@@ -17,7 +18,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::orderBy('created_at', 'DESC')->get();
 
         return view('models.articles.index')
                 ->with('articles', $articles);
@@ -46,9 +47,14 @@ class ArticlesController extends Controller
             'author' => 'required',
             'body' => 'required',
             'category' => 'required',
+            'push' => 'required|boolean'
         ]);
 
         $article = Article::create($request->all());
+
+        if($request->get('push')) {
+            $this->dispatch(new SendPush($article->title));
+        }
 
         return redirect()->route('articles.index');
     }
