@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        <h1>New Article</h1>
+        <h1>Edit Article</h1>
 
         <form action="{{ route('articles.update', $article->id) }}" method="post">
             <input type="hidden" name="_method" value="PUT">
