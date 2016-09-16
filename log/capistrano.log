@@ -1,0 +1,475 @@
+# Logfile created on 2016-08-21 16:48:54 -0500 by logger.rb/54362
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-21 16:48:54 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [40505537] Running /usr/bin/env mkdir -p /tmp on 107.170.237.216
+ DEBUG [40505537] Command: /usr/bin/env mkdir -p /tmp
+  INFO [40505537] Finished in 0.776 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-schedules-production-Oscar.sh 0.0%
+  INFO Uploading /tmp/git-ssh-schedules-production-Oscar.sh 100.0%
+  INFO [94d07c41] Running /usr/bin/env chmod 700 /tmp/git-ssh-schedules-production-Oscar.sh on 107.170.237.216
+ DEBUG [94d07c41] Command: /usr/bin/env chmod 700 /tmp/git-ssh-schedules-production-Oscar.sh
+  INFO [94d07c41] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [5a0eab99] Running /usr/bin/env git ls-remote --heads git@github.com:oscarnewman/schedules-web.git on 107.170.237.216
+ DEBUG [5a0eab99] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-schedules-production-Oscar.sh" ; /usr/bin/env git ls-remote --heads git@github.com:oscarnewman/schedules-web.git )
+ DEBUG [5a0eab99] 	4f8290dc65c38256a79afb6b32484f7b88b08c94	refs/heads/master
+  INFO [5a0eab99] Finished in 1.988 seconds with exit status 0 (successful).
+  INFO [a27d7caf] Running /usr/bin/env mkdir -p /var/www/schedules.lasa2017.com/shared /var/www/schedules.lasa2017.com/releases on 107.170.237.216
+ DEBUG [a27d7caf] Command: /usr/bin/env mkdir -p /var/www/schedules.lasa2017.com/shared /var/www/schedules.lasa2017.com/releases
+  INFO [a27d7caf] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [e1394e2a] Running /usr/bin/env mkdir -p /var/www/schedules.lasa2017.com/shared /var/www/schedules.lasa2017.com/shared/public /var/www/schedules.lasa2017.com/shared/resources/certs on 107.170.237.216
+ DEBUG [e1394e2a] Command: /usr/bin/env mkdir -p /var/www/schedules.lasa2017.com/shared /var/www/schedules.lasa2017.com/shared/public /var/www/schedules.lasa2017.com/shared/resources/certs
+  INFO [e1394e2a] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [3210c99f] Running [ -f /var/www/schedules.lasa2017.com/shared/.env ] on 107.170.237.216
+ DEBUG [3210c99f] Command: [ -f /var/www/schedules.lasa2017.com/shared/.env ]
+ DEBUG [3210c99f] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [2c659f0b] Running [ -f /var/www/schedules.lasa2017.com/shared/public/.htaccess ] on 107.170.237.216
+ DEBUG [2c659f0b] Command: [ -f /var/www/schedules.lasa2017.com/shared/public/.htaccess ]
+ DEBUG [2c659f0b] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [bfc8b530] Running [ -f /var/www/schedules.lasa2017.com/shared/resources/certs/apns.pem ] on 107.170.237.216
+ DEBUG [bfc8b530] Command: [ -f /var/www/schedules.lasa2017.com/shared/resources/certs/apns.pem ]
+ DEBUG [bfc8b530] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [7cf6fc98] Running [ -f /var/www/schedules.lasa2017.com/shared/resources/certs/apns.development.pem ] on 107.170.237.216
+ DEBUG [7cf6fc98] Command: [ -f /var/www/schedules.lasa2017.com/shared/resources/certs/apns.development.pem ]
+ DEBUG [7cf6fc98] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [47b592bf] Running [ -f /var/www/schedules.lasa2017.com/current/REVISION ] on 107.170.237.216
+ DEBUG [47b592bf] Command: [ -f /var/www/schedules.lasa2017.com/current/REVISION ]
+ DEBUG [47b592bf] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [3c9c8998] Running /usr/bin/env cat /var/www/schedules.lasa2017.com/current/REVISION 2>/dev/null on 107.170.237.216
+ DEBUG [3c9c8998] Command: /usr/bin/env cat /var/www/schedules.lasa2017.com/current/REVISION 2>/dev/null
+ DEBUG [3c9c8998] 	30910e3
+ DEBUG [3c9c8998] Finished in 0.097 seconds with exit status 0 (successful).
+ DEBUG [1fe30196] Running [ -f /var/www/schedules.lasa2017.com/repo/HEAD ] on 107.170.237.216
+ DEBUG [1fe30196] Command: [ -f /var/www/schedules.lasa2017.com/repo/HEAD ]
+ DEBUG [1fe30196] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/schedules.lasa2017.com/repo
+ DEBUG [ca99bff2] Running if test ! -d /var/www/schedules.lasa2017.com/repo; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/repo'" 1>&2; false; fi on 107.170.237.216
+ DEBUG [ca99bff2] Command: if test ! -d /var/www/schedules.lasa2017.com/repo; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/repo'" 1>&2; false; fi
+ DEBUG [ca99bff2] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [26d548bb] Running /usr/bin/env git remote update --prune on 107.170.237.216
+ DEBUG [26d548bb] Command: cd /var/www/schedules.lasa2017.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-schedules-production-Oscar.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [26d548bb] 	Fetching origin
+ DEBUG [26d548bb] 	From github.com:oscarnewman/schedules-web
+   30910e3..4f8290d  master     -> master
+  INFO [26d548bb] Finished in 2.075 seconds with exit status 0 (successful).
+ DEBUG [a96cfd28] Running if test ! -d /var/www/schedules.lasa2017.com/repo; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/repo'" 1>&2; false; fi on 107.170.237.216
+ DEBUG [a96cfd28] Command: if test ! -d /var/www/schedules.lasa2017.com/repo; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/repo'" 1>&2; false; fi
+ DEBUG [a96cfd28] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [e43d5054] Running /usr/bin/env mkdir -p /var/www/schedules.lasa2017.com/releases/20160821214859 on 107.170.237.216
+ DEBUG [e43d5054] Command: cd /var/www/schedules.lasa2017.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-schedules-production-Oscar.sh" ; /usr/bin/env mkdir -p /var/www/schedules.lasa2017.com/releases/20160821214859 )
+  INFO [e43d5054] Finished in 0.098 seconds with exit status 0 (successful).
+  INFO [97f854c2] Running /usr/bin/env git archive master | tar -x -f - -C /var/www/schedules.lasa2017.com/releases/20160821214859 on 107.170.237.216
+ DEBUG [97f854c2] Command: cd /var/www/schedules.lasa2017.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-schedules-production-Oscar.sh" ; /usr/bin/env git archive master | tar -x -f - -C /var/www/schedules.lasa2017.com/releases/20160821214859 )
+  INFO [97f854c2] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [c6aa95b6] Running if test ! -d /var/www/schedules.lasa2017.com/repo; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/repo'" 1>&2; false; fi on 107.170.237.216
+ DEBUG [c6aa95b6] Command: if test ! -d /var/www/schedules.lasa2017.com/repo; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/repo'" 1>&2; false; fi
+ DEBUG [c6aa95b6] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [012fa935] Running /usr/bin/env git rev-list --max-count=1 master on 107.170.237.216
+ DEBUG [012fa935] Command: cd /var/www/schedules.lasa2017.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-schedules-production-Oscar.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [012fa935] 	4f8290dc65c38256a79afb6b32484f7b88b08c94
+ DEBUG [012fa935] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG [eb6ddbb9] Running if test ! -d /var/www/schedules.lasa2017.com/releases/20160821214859; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases/20160821214859'" 1>&2; false; fi on 107.170.237.216
+ DEBUG [eb6ddbb9] Command: if test ! -d /var/www/schedules.lasa2017.com/releases/20160821214859; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases/20160821214859'" 1>&2; false; fi
+ DEBUG [eb6ddbb9] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [ca4bc64d] Running /usr/bin/env echo "4f8290dc65c38256a79afb6b32484f7b88b08c94" >> REVISION on 107.170.237.216
+ DEBUG [ca4bc64d] Command: cd /var/www/schedules.lasa2017.com/releases/20160821214859 && /usr/bin/env echo "4f8290dc65c38256a79afb6b32484f7b88b08c94" >> REVISION
+  INFO [ca4bc64d] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [a87d1537] Running /usr/bin/env mkdir -p /var/www/schedules.lasa2017.com/releases/20160821214859 /var/www/schedules.lasa2017.com/releases/20160821214859/public /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs on 107.170.237.216
+ DEBUG [a87d1537] Command: /usr/bin/env mkdir -p /var/www/schedules.lasa2017.com/releases/20160821214859 /var/www/schedules.lasa2017.com/releases/20160821214859/public /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs
+  INFO [a87d1537] Finished in 0.102 seconds with exit status 0 (successful).
+ DEBUG [07c7170f] Running [ -L /var/www/schedules.lasa2017.com/releases/20160821214859/.env ] on 107.170.237.216
+ DEBUG [07c7170f] Command: [ -L /var/www/schedules.lasa2017.com/releases/20160821214859/.env ]
+ DEBUG [07c7170f] Finished in 0.093 seconds with exit status 1 (failed).
+ DEBUG [400693c3] Running [ -f /var/www/schedules.lasa2017.com/releases/20160821214859/.env ] on 107.170.237.216
+ DEBUG [400693c3] Command: [ -f /var/www/schedules.lasa2017.com/releases/20160821214859/.env ]
+ DEBUG [400693c3] Finished in 0.094 seconds with exit status 1 (failed).
+  INFO [d372a5e5] Running /usr/bin/env ln -s /var/www/schedules.lasa2017.com/shared/.env /var/www/schedules.lasa2017.com/releases/20160821214859/.env on 107.170.237.216
+ DEBUG [d372a5e5] Command: /usr/bin/env ln -s /var/www/schedules.lasa2017.com/shared/.env /var/www/schedules.lasa2017.com/releases/20160821214859/.env
+  INFO [d372a5e5] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [bc74babe] Running [ -L /var/www/schedules.lasa2017.com/releases/20160821214859/public/.htaccess ] on 107.170.237.216
+ DEBUG [bc74babe] Command: [ -L /var/www/schedules.lasa2017.com/releases/20160821214859/public/.htaccess ]
+ DEBUG [bc74babe] Finished in 0.096 seconds with exit status 1 (failed).
+ DEBUG [0f36e00b] Running [ -f /var/www/schedules.lasa2017.com/releases/20160821214859/public/.htaccess ] on 107.170.237.216
+ DEBUG [0f36e00b] Command: [ -f /var/www/schedules.lasa2017.com/releases/20160821214859/public/.htaccess ]
+ DEBUG [0f36e00b] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [ed28362f] Running /usr/bin/env rm /var/www/schedules.lasa2017.com/releases/20160821214859/public/.htaccess on 107.170.237.216
+ DEBUG [ed28362f] Command: /usr/bin/env rm /var/www/schedules.lasa2017.com/releases/20160821214859/public/.htaccess
+  INFO [ed28362f] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [772c502e] Running /usr/bin/env ln -s /var/www/schedules.lasa2017.com/shared/public/.htaccess /var/www/schedules.lasa2017.com/releases/20160821214859/public/.htaccess on 107.170.237.216
+ DEBUG [772c502e] Command: /usr/bin/env ln -s /var/www/schedules.lasa2017.com/shared/public/.htaccess /var/www/schedules.lasa2017.com/releases/20160821214859/public/.htaccess
+  INFO [772c502e] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [f31770c1] Running [ -L /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs/apns.pem ] on 107.170.237.216
+ DEBUG [f31770c1] Command: [ -L /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs/apns.pem ]
+ DEBUG [f31770c1] Finished in 0.093 seconds with exit status 1 (failed).
+ DEBUG [502f8b6d] Running [ -f /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs/apns.pem ] on 107.170.237.216
+ DEBUG [502f8b6d] Command: [ -f /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs/apns.pem ]
+ DEBUG [502f8b6d] Finished in 0.096 seconds with exit status 1 (failed).
+  INFO [3d5d4435] Running /usr/bin/env ln -s /var/www/schedules.lasa2017.com/shared/resources/certs/apns.pem /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs/apns.pem on 107.170.237.216
+ DEBUG [3d5d4435] Command: /usr/bin/env ln -s /var/www/schedules.lasa2017.com/shared/resources/certs/apns.pem /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs/apns.pem
+  INFO [3d5d4435] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [7443d24d] Running [ -L /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs/apns.development.pem ] on 107.170.237.216
+ DEBUG [7443d24d] Command: [ -L /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs/apns.development.pem ]
+ DEBUG [7443d24d] Finished in 0.097 seconds with exit status 1 (failed).
+ DEBUG [d885e40d] Running [ -f /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs/apns.development.pem ] on 107.170.237.216
+ DEBUG [d885e40d] Command: [ -f /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs/apns.development.pem ]
+ DEBUG [d885e40d] Finished in 0.095 seconds with exit status 1 (failed).
+  INFO [e7c2fe80] Running /usr/bin/env ln -s /var/www/schedules.lasa2017.com/shared/resources/certs/apns.development.pem /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs/apns.development.pem on 107.170.237.216
+ DEBUG [e7c2fe80] Command: /usr/bin/env ln -s /var/www/schedules.lasa2017.com/shared/resources/certs/apns.development.pem /var/www/schedules.lasa2017.com/releases/20160821214859/resources/certs/apns.development.pem
+  INFO [e7c2fe80] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [2d82404a] Running /usr/bin/env [ -e /usr/local/bin/composer ] on 107.170.237.216
+ DEBUG [2d82404a] Command: /usr/bin/env [ -e /usr/local/bin/composer ]
+ DEBUG [2d82404a] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [fcda5f1f] Running /usr/bin/env composer self-update on 107.170.237.216
+ DEBUG [fcda5f1f] Command: /usr/bin/env composer self-update
+ DEBUG [fcda5f1f] 	You are running composer with xdebug enabled. This has a major impact on runtime performance. See https://getcomposer.org/xdebug
+ DEBUG [fcda5f1f] 	
+ DEBUG [fcda5f1f] 	You are already using composer version 1.2.0 (stable channel).
+ DEBUG [fcda5f1f] 	
+  INFO [fcda5f1f] Finished in 1.050 seconds with exit status 0 (successful).
+ DEBUG [35837d3c] Running if test ! -d /var/www/schedules.lasa2017.com/releases/20160821214859; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases/20160821214859'" 1>&2; false; fi on 107.170.237.216
+ DEBUG [35837d3c] Command: if test ! -d /var/www/schedules.lasa2017.com/releases/20160821214859; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases/20160821214859'" 1>&2; false; fi
+ DEBUG [35837d3c] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [744fe413] Running /usr/bin/env composer install --no-dev --no-scripts --optimize-autoloader on 107.170.237.216
+ DEBUG [744fe413] Command: cd /var/www/schedules.lasa2017.com/releases/20160821214859 && /usr/bin/env composer install --no-dev --no-scripts --optimize-autoloader
+ DEBUG [744fe413] 	You are running composer with xdebug enabled. This has a major impact on runtime performance. See https://getcomposer.org/xdebug
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	Do not run Composer as root/super user! See https://getcomposer.org/root for details
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	Loading composer repositories with package information
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	Installing dependencies from lock file
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing nikic/php-parser (2.x-dev 81f7da3)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing classpreloader/classpreloader (dev-master de1d55d)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing zendframework/zend-json (2.6.1)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing zendframework/zend-stdlib (dev-develop 1808d6c)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing container-interop/container-interop (1.1.0)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing zendframework/zend-validator (dev-develop 8422bb1)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing zendframework/zend-escaper (dev-develop 724402b)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing zendframework/zend-uri (dev-develop ed906be)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing zendframework/zend-loader (dev-develop dcacfc3)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing zendframework/zend-http (dev-master 98b1cac)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing zendframework/zendservice-google-gcm (1.0.3)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing zendframework/zendservice-apple-apns (1.2.0)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/process (3.0.x-dev 768debc)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/options-resolver (dev-master 45940bc)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/polyfill-mbstring (dev-master 8a6bdec)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/console (3.0.x-dev 926061e)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing sly/notification-pusher (v2.2.2)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing vlucas/phpdotenv (dev-master 8c9a0b5)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/var-dumper (3.0.x-dev 1f7e071)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/translation (3.0.x-dev eee6c66)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/routing (3.0.x-dev 9038984)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/polyfill-util (dev-master ef830ce)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/polyfill-php56 (dev-master 3edf57a)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/http-foundation (3.0.x-dev 49ba00f)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/event-dispatcher (dev-master 5382f4c)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing psr/log (dev-master d8e60a5)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/debug (3.0.x-dev 697c527)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/http-kernel (3.0.x-dev 03ac7bb)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing symfony/finder (3.0.x-dev 3eb4e64)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing swiftmailer/swiftmailer (5.x-dev 0b3e604)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing jakub-onderka/php-console-color (0.1)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing jakub-onderka/php-console-highlighter (v0.3.2)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing dnoegel/php-xdg-base-dir (0.1)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing psy/psysh (v0.7.2)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing paragonie/random_compat (v1.x-dev 1115ffa)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing nesbot/carbon (dev-master 7a02699)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing mtdowling/cron-expression (v1.1.0)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing monolog/monolog (1.x-dev f42fbdf)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing league/flysystem (dev-master 50e2045)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing jeremeamia/superclosure (dev-master 6fe8ad0)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing doctrine/inflector (dev-master 803a2ed)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing laravel/framework (5.2.x-dev f6fe8b2)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing davibennun/laravel-push-notification (dev-laravel5 b703b0f)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing league/fractal (dev-master 56ad893)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing doctrine/lexer (dev-master 83893c5)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing doctrine/annotations (v1.2.7)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing webmozart/assert (dev-master 8444f2a)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing phpdocumentor/reflection-common (dev-master 144c307)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing phpdocumentor/type-resolver (0.2)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing phpdocumentor/reflection-docblock (3.1.0)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing dingo/blueprint (dev-master 15c9e7c)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	  - Installing dingo/api (dev-master cc21964)
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	    Loading from cache
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	
+ DEBUG [744fe413] 	Generating optimized autoload files
+ DEBUG [744fe413] 	
+  INFO [744fe413] Finished in 6.035 seconds with exit status 0 (successful).
+ DEBUG [bd0d27da] Running if test ! -d /var/www/schedules.lasa2017.com/releases/20160821214859; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases/20160821214859'" 1>&2; false; fi on 107.170.237.216
+ DEBUG [bd0d27da] Command: if test ! -d /var/www/schedules.lasa2017.com/releases/20160821214859; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases/20160821214859'" 1>&2; false; fi
+ DEBUG [bd0d27da] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [4d3289f3] Running /usr/bin/env composer dump-autoload on 107.170.237.216
+ DEBUG [4d3289f3] Command: cd /var/www/schedules.lasa2017.com/releases/20160821214859 && /usr/bin/env composer dump-autoload
+ DEBUG [4d3289f3] 	You are running composer with xdebug enabled. This has a major impact on runtime performance. See https://getcomposer.org/xdebug
+ DEBUG [4d3289f3] 	
+ DEBUG [4d3289f3] 	Do not run Composer as root/super user! See https://getcomposer.org/root for details
+ DEBUG [4d3289f3] 	
+ DEBUG [4d3289f3] 	Generating autoload files
+ DEBUG [4d3289f3] 	
+  INFO [4d3289f3] Finished in 0.523 seconds with exit status 0 (successful).
+ DEBUG [c8b25eb9] Running if test ! -d /var/www/schedules.lasa2017.com/releases/20160821214859; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases/20160821214859'" 1>&2; false; fi on 107.170.237.216
+ DEBUG [c8b25eb9] Command: if test ! -d /var/www/schedules.lasa2017.com/releases/20160821214859; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases/20160821214859'" 1>&2; false; fi
+ DEBUG [c8b25eb9] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [0bf6e8ff] Running /usr/bin/env chmod u+x artisan on 107.170.237.216
+ DEBUG [0bf6e8ff] Command: cd /var/www/schedules.lasa2017.com/releases/20160821214859 && /usr/bin/env chmod u+x artisan
+  INFO [0bf6e8ff] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [afda02d8] Running /usr/bin/env chmod -R 777 storage/ on 107.170.237.216
+ DEBUG [afda02d8] Command: cd /var/www/schedules.lasa2017.com/releases/20160821214859 && /usr/bin/env chmod -R 777 storage/
+  INFO [afda02d8] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [2547893f] Running /usr/bin/env chmod -R 777 bootstrap/ on 107.170.237.216
+ DEBUG [2547893f] Command: cd /var/www/schedules.lasa2017.com/releases/20160821214859 && /usr/bin/env chmod -R 777 bootstrap/
+  INFO [2547893f] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [e3c2dd9d] Running if test ! -d /var/www/schedules.lasa2017.com/releases/20160821214859; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases/20160821214859'" 1>&2; false; fi on 107.170.237.216
+ DEBUG [e3c2dd9d] Command: if test ! -d /var/www/schedules.lasa2017.com/releases/20160821214859; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases/20160821214859'" 1>&2; false; fi
+ DEBUG [e3c2dd9d] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [b85cd070] Running /usr/bin/env php artisan clear-compiled on 107.170.237.216
+ DEBUG [b85cd070] Command: cd /var/www/schedules.lasa2017.com/releases/20160821214859 && /usr/bin/env php artisan clear-compiled
+  INFO [b85cd070] Finished in 0.313 seconds with exit status 0 (successful).
+  INFO [580f511c] Running /usr/bin/env php artisan optimize on 107.170.237.216
+ DEBUG [580f511c] Command: cd /var/www/schedules.lasa2017.com/releases/20160821214859 && /usr/bin/env php artisan optimize
+ DEBUG [580f511c] 	Generating optimized class loader
+  INFO [580f511c] Finished in 2.409 seconds with exit status 0 (successful).
+ DEBUG [ae2d30f0] Running if test ! -d /var/www/schedules.lasa2017.com/releases/20160821214859; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases/20160821214859'" 1>&2; false; fi on 107.170.237.216
+ DEBUG [ae2d30f0] Command: if test ! -d /var/www/schedules.lasa2017.com/releases/20160821214859; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases/20160821214859'" 1>&2; false; fi
+ DEBUG [ae2d30f0] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [013a1a56] Running /usr/bin/env php artisan down on 107.170.237.216
+ DEBUG [013a1a56] Command: cd /var/www/schedules.lasa2017.com/releases/20160821214859 && /usr/bin/env php artisan down
+ DEBUG [013a1a56] 	Application is now in maintenance mode.
+  INFO [013a1a56] Finished in 0.304 seconds with exit status 0 (successful).
+  INFO [94fc918f] Running /usr/bin/env php artisan migrate --force on 107.170.237.216
+ DEBUG [94fc918f] Command: cd /var/www/schedules.lasa2017.com/releases/20160821214859 && /usr/bin/env php artisan migrate --force
+ DEBUG [94fc918f] 	Nothing to migrate.
+ DEBUG [94fc918f] 	
+  INFO [94fc918f] Finished in 0.521 seconds with exit status 0 (successful).
+  INFO [4b1d740f] Running /usr/bin/env php artisan up on 107.170.237.216
+ DEBUG [4b1d740f] Command: cd /var/www/schedules.lasa2017.com/releases/20160821214859 && /usr/bin/env php artisan up
+ DEBUG [4b1d740f] 	Application is now live.
+  INFO [4b1d740f] Finished in 0.286 seconds with exit status 0 (successful).
+  INFO [8d01e88f] Running /usr/bin/env ln -s /var/www/schedules.lasa2017.com/releases/20160821214859 /var/www/schedules.lasa2017.com/releases/current on 107.170.237.216
+ DEBUG [8d01e88f] Command: /usr/bin/env ln -s /var/www/schedules.lasa2017.com/releases/20160821214859 /var/www/schedules.lasa2017.com/releases/current
+  INFO [8d01e88f] Finished in 0.098 seconds with exit status 0 (successful).
+  INFO [3100208d] Running /usr/bin/env mv /var/www/schedules.lasa2017.com/releases/current /var/www/schedules.lasa2017.com on 107.170.237.216
+ DEBUG [3100208d] Command: /usr/bin/env mv /var/www/schedules.lasa2017.com/releases/current /var/www/schedules.lasa2017.com
+  INFO [3100208d] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [c31e1b3e] Running /usr/bin/env ls -xtr /var/www/schedules.lasa2017.com/releases on 107.170.237.216
+ DEBUG [c31e1b3e] Command: /usr/bin/env ls -xtr /var/www/schedules.lasa2017.com/releases
+ DEBUG [c31e1b3e] 	20160821033509	20160821033612	20160821043156	20160821043245	20160821045312
+20160821214859
+ DEBUG [c31e1b3e] Finished in 0.098 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 107.170.237.216
+  INFO [f24c5105] Running /usr/bin/env rm -rf /var/www/schedules.lasa2017.com/releases/20160821033509 on 107.170.237.216
+ DEBUG [f24c5105] Command: /usr/bin/env rm -rf /var/www/schedules.lasa2017.com/releases/20160821033509
+  INFO [f24c5105] Finished in 0.114 seconds with exit status 0 (successful).
+ DEBUG [d1e1f4bb] Running if test ! -d /var/www/schedules.lasa2017.com/releases; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases'" 1>&2; false; fi on 107.170.237.216
+ DEBUG [d1e1f4bb] Command: if test ! -d /var/www/schedules.lasa2017.com/releases; then echo "Directory does not exist '/var/www/schedules.lasa2017.com/releases'" 1>&2; false; fi
+ DEBUG [d1e1f4bb] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [e5fe1d1c] Running /usr/bin/env echo "Branch master (at 4f8290dc65c38256a79afb6b32484f7b88b08c94) deployed as release 20160821214859 by Oscar" >> /var/www/schedules.lasa2017.com/revisions.log on 107.170.237.216
+ DEBUG [e5fe1d1c] Command: cd /var/www/schedules.lasa2017.com/releases && /usr/bin/env echo "Branch master (at 4f8290dc65c38256a79afb6b32484f7b88b08c94) deployed as release 20160821214859 by Oscar" >> /var/www/schedules.lasa2017.com/revisions.log
+  INFO [e5fe1d1c] Finished in 0.096 seconds with exit status 0 (successful).
